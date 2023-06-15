@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import "UI/checkbox.css";
+@import "UI/button.css";
+
+:root {
+    --promo-background-color: #FD8A8A;
+    --break-background-color: #A8D1D1;
+    --svg-color: #fff;
+    --button-background-color: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: .5rem;
+    background-color: var(--promo-background-color);
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+header {
+    box-shadow: rgba(33, 35, 38, 0.4) 0px 10px 10px -10px;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    display: none;
+}
+
+header svg {
+    color: var(--svg-color);
+    display: inline-block;
+    vertical-align: top;
+}
