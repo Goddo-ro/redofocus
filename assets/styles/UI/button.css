@@ -7,6 +7,9 @@
     background-color: var(--button-background-color);
     padding: 4px;
     border-radius: var(--button-border-radius);
+}
+
+.button:not(#timer-container) {
     cursor: pointer;
 }
 
@@ -28,6 +31,31 @@
     font-size: 1.25rem;
     letter-spacing: 1px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#pauseBtn {
+    box-shadow: none;
+    float: left;
+}
+
+#skipBtn {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+#skipBtn > svg {
+    color: var(--main-text-color);
+    transition: color .1s ease;
+}
+
+#skipBtn:hover > svg,
+#skipBtn:focus > svg,
+#skipBtn:active > svg {
+    color: var(--gray-color);
 }
 
 #add-promo-btn {

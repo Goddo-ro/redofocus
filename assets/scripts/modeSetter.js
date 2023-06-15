@@ -1,8 +1,15 @@
+const insertTime = () => {
+  const minutes = Math.floor(time / 60) > 9 ? Math.floor(time / 60) : "0" + Math.floor(time / 60);
+  const seconds = time % 60 > 9 ? time % 60 : "0" + time % 60;
+  const timeText = `${minutes}:${seconds}`;
+  timer.innerText = timeText;
+
+  document.title = `${timeText} - ${(mode === "promo" ? (curPromo || config.defaultPromo) : config.restPromo)}`;
+}
+
 const setTime = () => {
   time = (savedSettings ? savedSettings[mode].time : config[mode].time) * 60;
-  const minutes = time / 60 > 9 ? time / 60 : "0" + time / 60;
-  const seconds = time % 60 > 9 ? time % 60 : "0" + time % 60;
-  timer.innerText = `${minutes}:${seconds}`;
+  insertTime();
 }
 
 const setTheme = (themeName) => {
@@ -39,9 +46,18 @@ togglers.forEach(toggler => {
     setTheme(toggler.id + "-theme");
     resetActive();
     setTime();
+    if (toggler.id !== "promo") {
+      localStorage.setItem("rest", toggler.id);
+      lastRestMode = toggler.id;
+    }
   }
 })
 
-toggleTheme();
-resetActive();
-setTime();
+
+const resetMode = () => {
+  toggleTheme();
+  resetActive();
+  setTime();
+}
+
+resetMode();
