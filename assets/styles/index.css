@@ -4,7 +4,7 @@
 @import "UI/promo.css";
 
 :root {
-    --promo-background-color: #E97777;
+    --promo-background-color: #DD4949;
     --break-background-color: #A8D1D1;
     --gray-color: #d7d7d7;
     --svg-color: #fff;
@@ -28,13 +28,22 @@ body {
     color: var(--main-text-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
 main {
     width: 100%;
-    max-width: 800px;
+    max-width: 500px;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.hidden {
+    display: none;
 }
 
 header {
@@ -51,8 +60,13 @@ header > * {
     justify-content: space-between;
 }
 
+header > .left {
+    gap: .5rem;
+}
+
 header h1 {
     display: none;
+    font-size: 1.25rem;
 }
 
 svg {
@@ -71,6 +85,7 @@ svg {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #time {
@@ -107,4 +122,18 @@ svg {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+}
+
+@media (min-width: 500px) {
+    header h1 {
+        display: block;
+    }
+
+    #time {
+        font-size: 8rem;
+    }
+
+    .hidden {
+        display: inline;
+    }
 }
