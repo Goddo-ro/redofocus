@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import "UI/checkbox.css";
 @import "UI/button.css";
+@import "UI/promo.css";
 
 :root {
     --promo-background-color: #E97777;
@@ -54,10 +55,12 @@ header h1 {
     display: none;
 }
 
-header svg {
+svg {
     color: var(--svg-color);
     display: inline-block;
     vertical-align: top;
+    width: 24px;
+    height: 24px;
 }
 
 #timer-container {
@@ -86,4 +89,22 @@ header svg {
 
 #promo-name {
     font-size: 1.2rem;
+}
+
+#promos > .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--gray-color);
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+
+#promos > .header svg {
+    filter: invert(100%) sepia(0%) saturate(3741%) hue-rotate(255deg) brightness(113%) contrast(101%);
+}
+
+#promos-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }

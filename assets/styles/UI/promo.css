@@ -1,0 +1,30 @@
+:root {
+    --promo-color: #262626;
+}
+
+.promo {
+    padding: 1rem;
+    background-color: var(--main-text-color);
+    color: var(--promo-color);
+    border-radius: var(--button-border-radius);
+}
+
+.promo.active {
+    border-left: .25rem solid var(--promo-color);
+}
+
+.promo p {
+    font-weight: bold;
+}
+
+.promo, .promo > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.promo > .button {
+    background-color: transparent;
+    border: 1px solid var(--gray-color);
+}

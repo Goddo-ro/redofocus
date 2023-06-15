@@ -1,4 +1,6 @@
 :root {
+    --add-promo-border-color: #B1B1B1;
+    --add-promo-color: #fff;
 }
 
 .button {
@@ -25,4 +27,22 @@
     font-size: 1.25rem;
     letter-spacing: 1px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#add-promo-btn {
+    margin-top: .5rem;
+    background-color: var(--promo-background-color);
+    border: 2px dashed var(--add-promo-border-color);
+    filter: brightness(90%);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+#add-promo-btn > a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: bold;
+    color: var(--add-promo-color);
 }
