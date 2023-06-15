@@ -1,0 +1,1 @@
+const timer = document.getElementById("time");
