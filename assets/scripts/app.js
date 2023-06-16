@@ -1,4 +1,5 @@
 const app = () => {
+  // Timer
   const showStart = () => {
     pauseContainer.style.display = "none";
     startBtn.style.display = "block";
@@ -40,6 +41,8 @@ const app = () => {
   skipBtn.onclick = () => {
     clearTimeInterval();
   }
+
+  generateTasks();
 }
 
 app();

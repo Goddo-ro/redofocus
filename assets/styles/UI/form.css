@@ -1,0 +1,91 @@
+#add-promo-form {
+    margin-top: .5rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.25em;
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+input::placeholder {
+    color: var(--gray-color);
+    font-style: italic;
+}
+
+input[type="number"] {
+    background-color: var(--gray-color);
+    width: 70px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 8px;
+
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    border: none;
+    display: none;
+}
+
+#count-container {
+    margin-bottom: 2.5rem;
+}
+
+#count-container img {
+    width: 10px;
+}
+
+#count-container > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+#count-container > div > .button {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#up {
+    transform: rotate(180deg);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: end !important;
+    padding: .5rem;
+}
+
+.footer a {
+    color: var(--dark-text-color);
+}
+
+.footer > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

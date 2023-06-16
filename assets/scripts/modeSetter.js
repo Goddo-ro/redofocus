@@ -2,8 +2,8 @@ const insertTime = () => {
   const minutes = Math.floor(time / 60) > 9 ? Math.floor(time / 60) : "0" + Math.floor(time / 60);
   const seconds = time % 60 > 9 ? time % 60 : "0" + time % 60;
   const timeText = `${minutes}:${seconds}`;
-  timer.innerText = timeText;
 
+  timer.innerText = timeText;
   document.title = `${timeText} - ${(mode === "promo" ? (curPromo || config.defaultPromo) : config.restPromo)}`;
 }
 

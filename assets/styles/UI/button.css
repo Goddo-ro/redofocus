@@ -1,6 +1,8 @@
 :root {
     --add-promo-border-color: #B1B1B1;
     --add-promo-color: #fff;
+
+    --dark-background-color: #252525;
 }
 
 .button {
@@ -20,6 +22,17 @@
 
 .button.shadowed:not(.active) {
     background-color: transparent;
+}
+
+.dark-button {
+    background-color: var(--dark-text-color);
+    color: var(--main-text-color);
+    padding: .5rem .75rem;
+}
+
+.dark-button:hover,
+.dark-button:focus {
+    background-color: var(--dark-background-color);
 }
 
 .three-d-button {
@@ -66,6 +79,11 @@
     border-radius: 8px;
     display: flex;
     justify-content: center;
+}
+
+#add-promo-btn:hover,
+#add-promo-btn:focus {
+    filter: brightness(95%);
 }
 
 #add-promo-btn > a {

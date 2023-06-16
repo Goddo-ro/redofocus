@@ -2,16 +2,19 @@
 @import "UI/checkbox.css";
 @import "UI/button.css";
 @import "UI/promo.css";
+@import "UI/form.css";
 
 :root {
     --break-background-color: #A8D1D1;
     --gray-color: #d7d7d7;
     --svg-color: #fff;
     --button-background-color: rgba(255, 255, 255, 0.2);
+    --main-text-color: #fff;
+    --dark-text-color: #565656;
     --button-shadowed-background-color: rgba(0, 0, 0, 0.1);
     --button-border-radius: 4px;
-    --main-text-color: #fff;
 }
+
 
 .promo-theme {
     --background-color: #DD4949;
@@ -139,6 +142,10 @@ svg {
 #pause-container {
     position: relative;
     display: none;
+}
+
+.bottom-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 @media (min-width: 500px) {

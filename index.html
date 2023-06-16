@@ -100,60 +100,6 @@
             </div>
         </div>
         <div id="promos-list">
-            <div class="promo active">
-                <div>
-                    <label class="checkbox-container">
-                        <input type="checkbox">
-                        <span class="checkbox" tabindex="0">
-                            <svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512"
-                                 viewBox="0 0 24 24" y="0"
-                                 x="0" height="512" width="512" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"><g><path data-original="currentColor" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path></g></svg>
-                        </span>
-                    </label>
-                    <p>Sleeping</p>
-                </div>
-                <div class="button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path data-original="currentColor" fill="currentColor"
-                              d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
-                              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path data-original="currentColor" fill="currentColor"
-                              d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
-                              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path data-original="currentColor" fill="currentColor"
-                              d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
-                              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="promo">
-                <div>
-                    <label class="checkbox-container">
-                        <input type="checkbox">
-                        <span class="checkbox" tabindex="0">
-                            <svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512"
-                                 viewBox="0 0 24 24" y="0"
-                                 x="0" height="512" width="512" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"><g><path data-original="currentColor" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path></g></svg>
-                        </span>
-                    </label>
-                    <p>Cleaning</p>
-                </div>
-                <div class="button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path data-original="currentColor" fill="currentColor"
-                              d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
-                              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path data-original="currentColor" fill="currentColor"
-                              d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
-                              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path data-original="currentColor" fill="currentColor"
-                              d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
-                              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </div>
         </div>
         <div id="add-promo-btn" class="promo button">
             <a>
@@ -180,12 +126,37 @@
                 Add Task
             </a>
         </div>
+        <div id="add-promo-form" class="promo form">
+            <input id="task" placeholder="What are you working on?">
+            <p>Est Pomodoros</p>
+            <div id="count-container">
+                <input class="button" type="number">
+                <div>
+                    <div class="button bottom-shadow">
+                        <img id="up" src="assets/images/icons/downArrow.svg" alt="down">
+                    </div>
+                    <div class="button bottom-shadow">
+                        <img id="down" src="assets/images/icons/downArrow.svg" alt="down">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    <a id="cancel">Cancel</a>
+                    <div class="button dark-button">
+                        Save
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
 <script src="assets/scripts/config/config.js"></script>
 <script src="assets/scripts/htmlVars.js"></script>
 <script src="assets/scripts/appVars.js"></script>
+<script src="assets/scripts/utils/generatePromo.js"></script>
+<script src="assets/scripts/utils/tasksManager.js"></script>
 <script src="assets/scripts/app.js"></script>
 <script src="assets/scripts/modeSetter.js"></script>
 </body>

@@ -3,14 +3,22 @@
 }
 
 .promo {
+    box-sizing: border-box;
     padding: 1rem;
     background-color: var(--main-text-color);
     color: var(--promo-color);
     border-radius: var(--button-border-radius);
+    border-left: .35rem solid transparent;
+    cursor: pointer;
 }
 
-.promo.active {
-    border-left: .25rem solid var(--promo-color);
+.promo.active:not(.form) {
+    border-color: var(--promo-color);
+}
+
+.promo:not(.active):not(.form):hover,
+.promo:not(.active):not(.form):focus {
+    border-color: var(--gray-color);
 }
 
 .promo p {
@@ -27,4 +35,9 @@
 .promo > .button {
     background-color: transparent;
     border: 1px solid var(--gray-color);
+}
+
+.promo > .button:hover,
+.promo > .button:focus {
+    background-color: var(--gray-color);
 }
