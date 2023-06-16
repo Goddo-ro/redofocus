@@ -4,6 +4,9 @@ const pauseContainer = document.getElementById("pause-container");
 const pauseBtn = document.getElementById("pauseBtn");
 const skipBtn = document.getElementById("skipBtn");
 const promoList = document.getElementById("promos-list");
+// Cur promo container
+const curPromoCount = document.getElementById("promo-count");
+const curPromoName = document.getElementById("promo-name");
 // Add form
 const addPromoBtn = document.getElementById("add-promo-btn");
 const addPromoForm = document.getElementById("add-promo-form");

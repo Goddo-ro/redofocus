@@ -49,4 +49,5 @@ app();
 
 window.onbeforeunload = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks))
+  localStorage.setItem("count", countOfCompleted);
 };

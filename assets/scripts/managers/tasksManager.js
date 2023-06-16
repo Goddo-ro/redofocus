@@ -2,7 +2,12 @@ function generateTasks() {
   let resultHTML = "";
   tasks.forEach((task, i) => {
     resultHTML += generatePromo(task, i);
+    if (task.active) {
+      curPromo = task.task;
+      curPromoId = i;
+    }
   });
+  curPromoName.innerHTML = (mode === "promo" ? (curPromo || config.defaultPromo) : config.restPromo);
   promoList.innerHTML = resultHTML;
 }
 

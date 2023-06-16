@@ -3,8 +3,11 @@ const insertTime = () => {
   const seconds = time % 60 > 9 ? time % 60 : "0" + time % 60;
   const timeText = `${minutes}:${seconds}`;
 
+  const message = (mode === "promo" ? (curPromo || config.defaultPromo) : config.restPromo);
+
   timer.innerText = timeText;
-  document.title = `${timeText} - ${(mode === "promo" ? (curPromo || config.defaultPromo) : config.restPromo)}`;
+  document.title = `${timeText} - ${message}`;
+  curPromoName.innerText = message;
 }
 
 const setTime = () => {
