@@ -32,12 +32,20 @@
     gap: .5rem;
 }
 
-.promo > .button {
+.promo .button {
     background-color: transparent;
     border: 1px solid var(--gray-color);
 }
 
-.promo > .button:hover,
-.promo > .button:focus {
+.promo .button:hover,
+.promo .button:focus {
     background-color: var(--gray-color);
+}
+
+.promo-count-container span {
+    font-size: 1.2rem;
+}
+
+.promo-count-container p {
+    display: inline;
 }

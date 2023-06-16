@@ -1,6 +1,6 @@
-function generatePromo(promo) {
+function generatePromo(promo, id) {
   return `
-  <div class="promo ${promo.active ? "active" : ''}">
+  <div onclick="setActivePromo(${id})" id="promo-${id}" class="promo ${promo.active ? "active" : ''}">
     <div>
         <label class="checkbox-container">
             <input type="checkbox" ${promo.completed && "checked"}>
@@ -13,19 +13,59 @@ function generatePromo(promo) {
         </label>
         <p>${promo.task}</p>
     </div>
-    <div class="button">
-        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path data-original="currentColor" fill="currentColor"
-                  d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
-                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path data-original="currentColor" fill="currentColor"
-                  d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
-                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path data-original="currentColor" fill="currentColor"
-                  d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
-                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+    <div>
+        <div class="promo-count-container">
+            <span>${promo.curCount}</span>/<p class="promo-count">${promo.count}</p>
+        </div>
+        <div class="button" onclick="showPromoForm(${id})">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path data-original="currentColor" fill="currentColor"
+                      d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path data-original="currentColor" fill="currentColor"
+                      d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path data-original="currentColor" fill="currentColor"
+                      d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
     </div>
   </div>
   `;
+}
+
+function generatePromoForm(name, count, id) {
+  const form = document.createElement("div");
+  form.id = "form-" + id;
+  form.classList.add("promo");
+  form.classList.add("form");
+  form.classList.add("update-form")
+  form.innerHTML = `
+        <input id="task-upd" placeholder="What are you working on?" value="${name}">
+        <p>Est Pomodoros</p>
+        <div class="count-container">
+            <input id="count-input-upd" class="button" type="number" value="${count}">
+            <div>
+                <div id="up" class="button bottom-shadow">
+                    <img src="assets/images/icons/downArrow.svg" alt="down">
+                </div>
+                <div id="down" class="button bottom-shadow">
+                    <img src="assets/images/icons/downArrow.svg" alt="down">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+              <a onclick="deletePromo(${id})">Delete</a>
+            </div>
+            <div>
+                <a onclick="closePromoForm(${id})">Cancel</a>
+                <div onclick="updatePromo(${id})" class="button dark-button">
+                    Save
+                </div>
+            </div>
+        </div>
+  `;
+  return form;
 }

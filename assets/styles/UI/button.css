@@ -25,14 +25,14 @@
 }
 
 .dark-button {
-    background-color: var(--dark-text-color);
+    background-color: var(--dark-text-color) !important;
     color: var(--main-text-color);
     padding: .5rem .75rem;
 }
 
 .dark-button:hover,
 .dark-button:focus {
-    background-color: var(--dark-background-color);
+    background-color: var(--dark-background-color) !important;
 }
 
 .three-d-button {

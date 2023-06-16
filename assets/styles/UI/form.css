@@ -38,24 +38,27 @@ input::-webkit-inner-spin-button {
     align-items: start;
     position: relative;
     border: none;
+}
+
+.form:not(.update-form) {
     display: none;
 }
 
-#count-container {
+.count-container {
     margin-bottom: 2.5rem;
 }
 
-#count-container img {
+.count-container img {
     width: 10px;
 }
 
-#count-container > div {
+.count-container > div {
     display: flex;
     justify-content: space-between;
     gap: 4px;
 }
 
-#count-container > div > .button {
+.count-container > div > .button {
     width: 30px;
     height: 30px;
 
@@ -75,8 +78,7 @@ input::-webkit-inner-spin-button {
     right: 0;
     background-color: rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: end !important;
-    padding: .5rem;
+    padding: .5rem 1rem;
     cursor: auto;
 }
 

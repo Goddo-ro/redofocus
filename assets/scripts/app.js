@@ -49,4 +49,4 @@ app();
 
 window.onbeforeunload = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks))
-}
+};
