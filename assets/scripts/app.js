@@ -46,3 +46,7 @@ const app = () => {
 }
 
 app();
+
+window.onbeforeunload = () => {
+  localStorage.setItem("tasks", JSON.stringify(tasks))
+}
