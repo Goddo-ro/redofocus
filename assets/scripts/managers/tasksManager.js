@@ -1,3 +1,7 @@
+function setCurPromoName() {
+  curPromoName.innerHTML = (mode === "promo" ? (curPromo || config.defaultPromo) : config.restPromo);
+}
+
 function generateTasks() {
   let resultHTML = "";
   tasks.forEach((task, i) => {
@@ -7,7 +11,7 @@ function generateTasks() {
       curPromoId = i;
     }
   });
-  curPromoName.innerHTML = (mode === "promo" ? (curPromo || config.defaultPromo) : config.restPromo);
+  setCurPromoName();
   promoList.innerHTML = resultHTML;
 }
 
@@ -74,7 +78,13 @@ function updatePromo(id) {
 }
 
 function deletePromo(id) {
-  tasks = tasks.filter((task, taskId) => taskId !== id);
+  tasks = tasks.filter((task, taskId) => {
+    if (taskId === id && task.active) {
+      curPromo = null;
+    }
+    return taskId !== id
+  });
+  setCurPromoName();
   generateTasks();
 }
 
@@ -122,6 +132,24 @@ function addCurrCount(id) {
   generateTasks();
 }
 
+function clearAllCompletedTasks() {
+  tasks = tasks.filter(task => {
+    if (task.active && task.completed) {
+      curPromo = null;
+    }
+    return !task.completed
+  });
+  generateTasks();
+  toggleDropdown();
+}
+
+function clearAllTasks() {
+  tasks = [];
+  curPromo = null;
+  generateTasks();
+  toggleDropdown();
+}
+
 function upUpdatingPromoCount() {
   const input = document.getElementById(`count-input-upd`);
   input.value = Number.parseInt(input.value) + 1;
@@ -154,6 +182,9 @@ addFormSaveBtn.onclick = () => {
     count: countInput.value,
     curCount: 0,
   })
+
+  promoName.value = "";
+  countInput.value = 1;
 
   generateTasks();
   hideForm();

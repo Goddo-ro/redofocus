@@ -3,6 +3,7 @@
 @import "UI/button.css";
 @import "UI/promo.css";
 @import "UI/form.css";
+@import "UI/dropdown.css";
 
 :root {
     --break-background-color: #A8D1D1;
@@ -14,7 +15,6 @@
     --button-shadowed-background-color: rgba(0, 0, 0, 0.1);
     --button-border-radius: 4px;
 }
-
 
 .promo-theme {
     --background-color: #DD4949;
