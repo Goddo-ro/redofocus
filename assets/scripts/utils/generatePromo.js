@@ -45,7 +45,7 @@ function generatePromoForm(name, count, id) {
         <input id="task-upd" placeholder="What are you working on?" value="${name}">
         <p>Est Pomodoros</p>
         <div class="count-container">
-            <input id="count-input-upd" class="button" type="number" value="${count}">
+            <input id="count-input-upd" class="button" type="number" value="${count}" onkeypress="integerChange(event)">
             <div>
                 <div id="up" class="button bottom-shadow" onclick="upUpdatingPromoCount()">
                     <img src="assets/images/icons/downArrow.svg" alt="down">

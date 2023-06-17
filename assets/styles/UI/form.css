@@ -40,6 +40,10 @@ input::-webkit-inner-spin-button {
     border: none;
 }
 
+.form > input {
+    width: 100%;
+}
+
 .form:not(.update-form) {
     display: none;
 }
