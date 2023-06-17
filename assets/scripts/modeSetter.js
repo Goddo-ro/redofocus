@@ -56,6 +56,24 @@ togglers.forEach(toggler => {
   }
 })
 
+function saveSettings() {
+  const settings = {
+    "promo": {
+      "time": promodoroTime.value ? Math.max(promodoroTime.value, 1) : 1,
+    },
+    "short": {
+      "time": shortTime.value ? Math.max(shortTime.value, 1) : 1,
+    },
+    "long": {
+      "time": longTime.value ? Math.max(longTime.value, 1) : 1,
+    },
+  }
+
+  localStorage.setItem("settings", JSON.stringify(settings));
+  savedSettings = settings;
+  hideMenu();
+  setTime();
+}
 
 const resetMode = () => {
   toggleTheme();

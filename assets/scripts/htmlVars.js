@@ -4,7 +4,6 @@ const pauseContainer = document.getElementById("pause-container");
 const pauseBtn = document.getElementById("pauseBtn");
 const skipBtn = document.getElementById("skipBtn");
 const promoList = document.getElementById("promos-list");
-const dropDownBtn = document.getElementById("drop")
 // Cur promo container
 const curPromoCount = document.getElementById("count");
 const curPromoName = document.getElementById("promo-name");
@@ -17,3 +16,8 @@ const upBtn = document.getElementById("up");
 const downBtn = document.getElementById("down");
 const addFormCancel = document.getElementById("cancel");
 const addFormSaveBtn = document.getElementById("saveBtn");
+// Settings
+const settingsContainer = document.getElementById("settings-container");
+const promodoroTime = document.getElementById("promodoro-time");
+const shortTime = document.getElementById("short-time");
+const longTime = document.getElementById("long-time");

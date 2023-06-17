@@ -6,7 +6,6 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem .5rem;
-    display: flex;
     align-items: center;
     justify-content: center;
     display: none;
@@ -28,6 +27,11 @@
     justify-content: space-between;
     padding: 8px;
     border-bottom: 1px solid var(--gray-color);
+}
+
+.modal-content > .header img {
+    width: 12px;
+    height: 12px;
 }
 
 .modal-content > .main {
