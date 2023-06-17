@@ -4,6 +4,7 @@
 @import "UI/promo.css";
 @import "UI/form.css";
 @import "UI/dropdown.css";
+@import "UI/modal.css";
 
 :root {
     --break-background-color: #A8D1D1;
@@ -73,6 +74,7 @@ header > * {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 0;
 }
 
 header > .left {

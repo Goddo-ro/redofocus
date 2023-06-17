@@ -1,0 +1,68 @@
+.modal-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--main-text-color);
+    border-radius: 8px;
+    color: var(--dark-text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content > .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.modal-content > .main {
+    flex: 1;
+    padding: 1rem 1rem 2rem;
+}
+
+.modal-content > .main h4 {
+    margin-bottom: .75rem;
+}
+
+.modal-content .inputs-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content .inputs-container > div {
+    width: 28%;
+}
+
+.modal-content .inputs-container > div > p {
+    font-size: .8rem;
+    margin-bottom: 2px;
+}
+
+.modal-content .inputs-container > div > .button {
+    width: 100%;
+}
+
+.modal-content .inputs-container > div * {
+    margin: 0;
+}
+
+.modal-content > .footer {
+    position: unset;
+    display: flex;
+    justify-content: space-between;
+}
