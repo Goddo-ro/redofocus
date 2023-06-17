@@ -1,4 +1,5 @@
 const app = () => {
+  curPromoCount.innerText = count;
   // Timer
   const showStart = () => {
     pauseContainer.style.display = "none";
@@ -12,7 +13,15 @@ const app = () => {
 
   function clearTimeInterval() {
     const theme = (mode === "promo" ? (lastRestMode ? lastRestMode : config.rest) : "promo") + "-theme";
-    setTheme( theme);
+    if (mode === "promo") {
+      count = count ? count + 1 : 1;
+      curPromoCount.innerText = count;
+
+      if (curPromoId) {
+        addCurrCount(curPromoId);
+      }
+    }
+    setTheme(theme);
     resetMode();
     clearInterval(timeInterval);
     showStart();
@@ -47,7 +56,16 @@ const app = () => {
 
 app();
 
+function clearPromoCount(e) {
+  e.preventDefault();
+
+  if (confirm("Do you want to refresh the pomodoro count?") === true) {
+    count = 0;
+    curPromoCount.innerText = count;
+  }
+}
+
 window.onbeforeunload = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks))
-  localStorage.setItem("count", countOfCompleted);
+  localStorage.setItem("count", count);
 };

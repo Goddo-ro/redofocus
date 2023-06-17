@@ -1,6 +1,6 @@
 let savedSettings = localStorage.getItem("settings");
 let lastRestMode = localStorage.getItem("rest");
-let countOfCompleted = localStorage.getItem("count");
+let countOfCompleted = JSON.parse(localStorage.getItem("count"));
 let savedTasks = JSON.parse(localStorage.getItem("tasks"));
 let time;
 let mode = 'promo';

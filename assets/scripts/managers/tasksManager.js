@@ -110,6 +110,17 @@ function setActivePromo(e, id) {
   generateTasks();
 }
 
+function addCurrCount(id) {
+  for (let i = 0; i < tasks.length; i++) {
+    if (i === id) {
+      tasks[i].curCount++;
+      break;
+    }
+  }
+
+  generateTasks();
+}
+
 addPromoBtn.onclick = () => {
   addPromoBtn.style.display = "none";
   addPromoForm.style.display = "block";
