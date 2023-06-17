@@ -47,10 +47,10 @@ function generatePromoForm(name, count, id) {
         <div class="count-container">
             <input id="count-input-upd" class="button" type="number" value="${count}">
             <div>
-                <div id="up" class="button bottom-shadow">
+                <div id="up" class="button bottom-shadow" onclick="upUpdatingPromoCount()">
                     <img src="assets/images/icons/downArrow.svg" alt="down">
                 </div>
-                <div id="down" class="button bottom-shadow">
+                <div id="down" class="button bottom-shadow" onclick="downUpdatingPromoCount()">
                     <img src="assets/images/icons/downArrow.svg" alt="down">
                 </div>
             </div>

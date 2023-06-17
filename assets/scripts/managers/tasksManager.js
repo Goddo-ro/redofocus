@@ -121,6 +121,16 @@ function addCurrCount(id) {
   generateTasks();
 }
 
+function upUpdatingPromoCount() {
+  const input = document.getElementById(`count-input-upd`);
+  input.value = Number.parseInt(input.value) + 1;
+}
+
+function downUpdatingPromoCount() {
+  const input = document.getElementById(`count-input-upd`);
+  input.value = Math.max(Number.parseInt(input.value) - 1, 0);
+}
+
 addPromoBtn.onclick = () => {
   addPromoBtn.style.display = "none";
   addPromoForm.style.display = "block";
