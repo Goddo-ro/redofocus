@@ -59,13 +59,13 @@ togglers.forEach(toggler => {
 function saveSettings() {
   const settings = {
     "promo": {
-      "time": promodoroTime.value ? Math.max(Math.floor(promodoroTime.value), 1) : 1,
+      "time": Math.min(promodoroTime.value ? Math.max(Math.floor(promodoroTime.value), 1) : 1, 999),
     },
     "short": {
-      "time": shortTime.value ? Math.max(Math.floor(shortTime.value), 1) : 1,
+      "time": Math.min(shortTime.value ? Math.max(Math.floor(shortTime.value), 1) : 1, 999),
     },
     "long": {
-      "time": longTime.value ? Math.max(Math.floor(longTime.value), 1) : 1,
+      "time": Math.min(longTime.value ? Math.max(Math.floor(longTime.value), 1) : 1, 999),
     },
   }
 
