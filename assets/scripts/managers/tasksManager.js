@@ -69,7 +69,7 @@ function updatePromo(id) {
     if (i === id) {
       let task = tasks[i];
       task['task'] = newName;
-      task['count'] = newCount ? newCount : 1;
+      task['count'] = Math.min(newCount ? newCount : 1, 999);
       break;
     }
   }
@@ -179,7 +179,7 @@ addFormSaveBtn.onclick = () => {
     active: false,
     completed: false,
     task: task,
-    count: countInput.value ? countInput.value : 1,
+    count: Math.min(countInput.value ? countInput.value : 1, 999),
     curCount: 0,
   })
 
