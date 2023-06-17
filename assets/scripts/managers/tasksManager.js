@@ -111,6 +111,7 @@ function setActivePromo(e, id) {
 }
 
 function addCurrCount(id) {
+  console.log(id);
   for (let i = 0; i < tasks.length; i++) {
     if (i === id) {
       tasks[i].curCount++;

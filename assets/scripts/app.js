@@ -17,7 +17,7 @@ const app = () => {
       count = count ? count + 1 : 1;
       curPromoCount.innerText = count;
 
-      if (curPromoId) {
+      if (curPromoId != null) {
         addCurrCount(curPromoId);
       }
     }

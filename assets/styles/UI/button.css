@@ -11,6 +11,10 @@
     border-radius: var(--button-border-radius);
 }
 
+.button:active:not(#add-promo-btn) {
+    transform: translateY(2px);
+}
+
 .button:not(#timer-container) {
     cursor: pointer;
 }
