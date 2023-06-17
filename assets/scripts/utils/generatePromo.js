@@ -1,14 +1,14 @@
 function generatePromo(promo, id) {
   return `
-  <div onclick="setActivePromo(${id})" id="promo-${id}" class="promo ${promo.active ? "active" : ''}">
+  <div onclick="setActivePromo(event, ${id})" id="promo-${id}" class="promo ${promo.active ? "active" : ''}">
     <div>
-        <label class="checkbox-container">
-            <input type="checkbox" ${promo.completed && "checked"}>
-            <span class="checkbox" tabindex="0">
-                <svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512"
+        <label class="checkbox-container check-item" onclick="completePromo(${id})">
+            <input class="check-item" id="checkbox-${id}" type="checkbox" ${promo.completed && "checked"}>
+            <span class="checkbox check-item" tabindex="0">
+                <svg class="check-item" xml:space="preserve" style="enable-background:new 0 0 512 512"
                      viewBox="0 0 24 24" y="0"
                      x="0" height="512" width="512" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg"><g><path data-original="currentColor" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path></g></svg>
+                     xmlns="http://www.w3.org/2000/svg"><g><path class="check-item" data-original="currentColor" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path></g></svg>
             </span>
         </label>
         <p>${promo.task}</p>

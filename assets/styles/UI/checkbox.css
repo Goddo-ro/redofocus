@@ -31,6 +31,10 @@
     transition: var(--checkbox-transition);
 }
 
+.checkbox:hover {
+    background-color: var(--main-text-color);
+}
+
 .checkbox::before {
     position: absolute;
     content: '';

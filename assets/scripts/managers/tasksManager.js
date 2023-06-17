@@ -78,7 +78,31 @@ function deletePromo(id) {
   generateTasks();
 }
 
-function setActivePromo(id) {
+function completePromo(id) {
+  for (let i = 0; i < tasks.length; i++) {
+    if (i === id) {
+      tasks[i].completed = !document.getElementById(`checkbox-${id}`).checked;
+      break;
+    }
+  }
+
+  generateTasks();
+}
+
+function setActivePromo(e, id) {
+  e.preventDefault();
+
+  const button = document.querySelector(`#promo-${id} .button svg`)
+  if (button === e.target) {
+    return;
+  }
+  const checkItems = document.querySelectorAll(`#promo-${id} .check-item`)
+  for (let item of checkItems) {
+    if (item.classList.value === e.target.classList.value) {
+      return;
+    }
+  }
+
   tasks.forEach((task, i) => {
     task['active'] = i === id;
   })
